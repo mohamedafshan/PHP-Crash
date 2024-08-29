@@ -7,22 +7,31 @@
 </head>
 <body>
   
-        <?php
-           $name = "Dark Matter";
-           $read = true;
+    <!-- Array -->
+     <p>The Array list below</p>
+  <?php
+    $books = [
+        "Array Element 1",
+        "Array Element 2",
+        "Array Element 3"
+    ];
+  ?>
 
-           if($read){
-            $message = "You have read $name";
-           }
-           else{
-            $message = "You have NOT read $name";
-           }
-        ?>   
-        <h1>
-            <?php
-            echo "{$message}hello this is works" ?>
-        </h1> 
 
-  
+  <!-- Metode 1 -->
+  <!-- <ul> -->
+    <!-- <?php
+        foreach($books as $book){
+            echo "<li>{$book}</li>";
+        }
+    ?> -->
+  <!-- </ul> -->
+
+<ul>
+    <?php foreach($books as $book) : ?>
+        <li><?= $book ?></li>
+        <?php endforeach; ?>
+</ul>
+
 </body>
 </html>
