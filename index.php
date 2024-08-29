@@ -10,37 +10,41 @@
     <!-- Array -->
      <p>The Array list below</p>
   <?php
-    $books = [
-        "Array Element 1",
-        "Array Element 2",
-        "Array Element 3"
+    // $student = [
+    //     [
+    //         "hello",
+    //         "New",
+    //         "something"
+    //     ],
+    //     [
+    //         "x",
+    //         "y"
+    //     ]
+    // ];
+
+     $student = [
+        [
+            'name' => "Mohamed",
+            "age" => 24,
+            'Qualification' => "BIT"
+        ],
+        [
+            'name' => "Ahamed",
+            "age" => 21,
+            'Qualification' => "HNDIT"
+        ]
     ];
   ?>
 
+  <ul>
+    <?php foreach($student as $student) : ?> 
+    <li>
+          <?= $student["name"]; ?>  
+    </li>
+    <?php endforeach ?>
+  </ul>
 
-  <!-- Metode 1 -->
-  <!-- <ul> -->
-    <!-- <?php
-        foreach($books as $book){
-            echo "<li>{$book}</li>";
-        }
-    ?> -->
-  <!-- </ul> -->
-
-<ul>
-    <?php foreach($books as $book) : ?>
-        <!-- <li> -->
-            <!-- <?php echo"$book" ?> -->
-        <!-- </li>  -->
-        <!-- if you use php you should be use echo -->
-
-           <li>
-                <?= $book ?>
-            </li> 
-
-        
-        <?php endforeach; ?>
-</ul>
+    <!-- <?php echo $student[0]['name'] ?>    -->
 
 </body>
 </html>
