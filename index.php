@@ -29,7 +29,16 @@
 
 <ul>
     <?php foreach($books as $book) : ?>
-        <li><?= $book ?></li>
+        <!-- <li> -->
+            <!-- <?php echo"$book" ?> -->
+        <!-- </li>  -->
+        <!-- if you use php you should be use echo -->
+
+           <li>
+                <?= $book ?>
+            </li> 
+
+        
         <?php endforeach; ?>
 </ul>
 
