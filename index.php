@@ -41,10 +41,11 @@
 
       return $filteredBook;
     }
+    $filteredBooks = filterByAuthor($books ,'afshan');
   ?>
 
   <ul>
-    <?php foreach(filterByAuthor($books , 'Mohamed') as $book) : ?> 
+    <?php foreach($filteredBooks as $book) : ?> 
         <li>
               <a href="<?= $book['puchaseUrl'] ?>">
                   <?= $book['author']; ?> (<?= $book['releaseYear'] ?>) - by <?= $book['author'] ?>
