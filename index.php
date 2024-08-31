@@ -14,7 +14,7 @@
         [
             'name' => "x",
             "author" => "Mohamed",
-            'releaseYear' => 1999,
+            'releaseYear' => 2024,
             'puchaseUrl' => "http://example.com",
         ],
         [
@@ -31,17 +31,17 @@
         ]
     ];
 
-    function filterByAuthor($books , $author){
-      $filteredBook = [];
-      foreach($books as $book){
-        if($book['author'] === $author){
-          $filteredBook[] = $book;
+    function filter($item , $key , $value){
+      $filteredItem = [];
+      foreach($item as $book){
+        if($book[$key] === $value){
+          $filteredItem[] = $book;
         }
       }
 
-      return $filteredBook;
-    }
-    $filteredBooks = filterByAuthor($books ,'afshan');
+      return $filteredItem;
+    };
+    $filteredBooks = filter($books,'releaseYear' ,2024);
   ?>
 
   <ul>
