@@ -10,39 +10,47 @@
     <!-- Array -->
      <p>The Array list below</p>
   <?php
-    // $student = [
-    //     [
-    //         "hello",
-    //         "New",
-    //         "something"
-    //     ],
-    //     [
-    //         "x",
-    //         "y"
-    //     ]
-    // ];
-
-     $student = [
+     $books = [
         [
-            'name' => "Mohamed",
-            "age" => 24,
-            'Qualification' => "BIT"
+            'name' => "x",
+            "author" => "Mohamed",
+            'releaseYear' => 1999,
+            'puchaseUrl' => "http://example.com",
         ],
         [
-            'name' => "Ahamed",
-            "age" => 21,
-            'Qualification' => "HNDIT"
+            'name' => "y",
+            "author" => "Ahamed",
+            'releaseYear' => 2004,
+            'puchaseUrl' => "http://example2.com",
+        ],
+        [
+            'name' => "z",
+            "author" => "afshan",
+            'releaseYear' => 2024,
+            'puchaseUrl' => "http://example3.com",
         ]
     ];
+
+    function filterByAuthor(){
+      return 'This is came from function';
+    }
   ?>
 
   <ul>
-    <?php foreach($student as $student) : ?> 
-    <li>
-          <?= $student["name"]; ?>  
-    </li>
-    <?php endforeach ?>
+    <?php foreach($books as $book) : ?> 
+      <?php if($book['author'] ==='afshan'): ?>
+        <li>
+              <a href="<?= $book['puchaseUrl'] ?>">
+                  <?= $book['author']; ?> (<?= $book['releaseYear'] ?>) - by <?= $book['author'] ?>
+              </a>
+        </li>
+      <?php endif; ?>  
+    <?php endforeach; ?>
   </ul>
+
+  <p>
+      <?= filterByAuthor()?>
+  </p>
 
     <!-- <?php echo $student[0]['name'] ?>    -->
 
